@@ -1,0 +1,36 @@
+{
+    "name": "@mpietrucha/is-constructor",
+    "version": "0.0.2",
+    "repository": "mpietrucha/is-constructor-js",
+    "license": "MIT",
+    "author": {
+        "name": "Michał Pietrucha",
+        "email": "michal.pietrucha@off-site.pl"
+    },
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "unbuild",
+        "dev": "unbuild --watch",
+        "format": "prettier . --write --ignore-unknown"
+    },
+    "prettier": "@mpietrucha/prettier",
+    "dependencies": {
+        "@mpietrucha/is-basic": "^0.0.3",
+        "@mpietrucha/prettier": "^1.0.0",
+        "lodash-es": "^4.17.21"
+    },
+    "devDependencies": {
+        "unbuild": "^3.3.1"
+    }
+}
