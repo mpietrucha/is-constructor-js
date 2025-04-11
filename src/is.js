@@ -1,14 +1,14 @@
 import { usePrototype } from '@/prototype'
 import { useNegate } from '@mpietrucha/function'
 import { isEmpty, isFunction, isObject } from '@mpietrucha/is-basic'
-import { toString } from 'lodash-es'
+import { createString } from '@mpietrucha/string'
 
 export const isConstructor = input => {
     return isFunction(input) && isObject(usePrototype(input))
 }
 
 export const isClass = input => {
-    return isConstructor(input) && toString(input).includes('class')
+    return isConstructor(input) && createString(input).includes('class')
 }
 
 export const isInstanceOf = (input, constructor) => {
